@@ -17,6 +17,6 @@ public class CreateUserCommand implements ICommand {
     @Override
     public void execute(String command) {
         String[] userDetails = command.split(" ");
-        userController.createUser(userDetails[0], userDetails[1]);
+        userController.createUser(userDetails[1], userDetails[2]);
     }
 }

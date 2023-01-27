@@ -6,7 +6,11 @@ import repositories.UserRepository;
 import java.util.UUID;
 
 public class UserService {
-    private UserRepository userRepository;
+    private UserRepository userRepository = null;
+
+    public UserService() {
+        userRepository = new UserRepository();
+    }
 
     public User createUser(String name, String email) {
         UUID uuid = UUID.randomUUID();

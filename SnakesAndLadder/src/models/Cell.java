@@ -1,5 +1,8 @@
 package models;
 
+import lombok.Getter;
+
+@Getter
 public class Cell {
     private int index;
 

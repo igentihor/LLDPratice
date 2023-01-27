@@ -1,12 +1,16 @@
 package models;
 
+import lombok.Getter;
+
+import java.util.ArrayList;
 import java.util.List;
 
+@Getter
 public class Game {
-    private Board board;
-    private List<Dice> dices;
-    private List<Player> players;
     private int numPieces;
+    private Board board;
+    private List<Dice> dices = new ArrayList<>();
+    private List<Player> players = new ArrayList<>();
 
     public static Builder getBuilder() {
         return new Builder();
@@ -46,14 +50,5 @@ public class Game {
         public Game build() {
             return game;
         }
-
-    }
-
-    public void launchGame() {
-
-    }
-
-    public void checkIfGameEnded() {
-
     }
 }

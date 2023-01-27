@@ -13,8 +13,9 @@ public class CommandRegistry {
     }
 
     public void execute(String inputCommand) {
+        String[] userInput = inputCommand.split(" ");
         for(ICommand command: commands) {
-            if (command.matches(inputCommand)) {
+            if (command.matches(userInput[0])) {
                 command.execute(inputCommand);
                 return;
             }
